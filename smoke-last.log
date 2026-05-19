@@ -1,175 +1,148 @@
 ================================== 
-EJECUCION: lun. 18/05/2026 16:59:52,74 
+EJECUCION: mar. 19/05/2026 10:32:37,18 
 ================================== 
+  1. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/exchangeRate?base_currency=USD&target_currency=ARS' from origin 'https://pipe.store' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
   2. Failed to load resource: net::ERR_FAILED
+  3. TypeError: Failed to fetch
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1068198
+    at fs (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1377425)
+    at Lc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396393)
+    at t.unstable_runWithPriority (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1414665)
+    at Gi (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1339063)
+    at Nc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396144)
+    at https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396056
+    at F (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1413603)
+    at O.port1.onmessage (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1412361)
+  4. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/retail?name=pipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  5. Failed to load resource: net::ERR_FAILED
+  6. Error al obtener el retail_id: TypeError: Failed to fetch
+    at Proxy.fetchData (https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1374558)
+    at Proxy.getRetailByName (https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1389237)
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1066898
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1067088
+    at fs (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1377425)
+    at Lc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396393)
+    at t.unstable_runWithPriority (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1414665)
+    at Gi (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1339063)
+    at Nc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396144)
+    at https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396056
+  7. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/cart/' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  8. Failed to load resource: net::ERR_FAILED
+  9. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/zone/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  10. Failed to load resource: net::ERR_FAILED
+  11. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton-retail/footerpipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  12. Failed to load resource: net::ERR_FAILED
+  13. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/category/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  14. Failed to load resource: net::ERR_FAILED
+  15. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton/4' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  16. Failed to load resource: net::ERR_FAILED
+  17. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/configuration' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  18. Failed to load resource: net::ERR_FAILED
+  19. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/status' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  20. Failed to load resource: net::ERR_FAILED
+  21. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/exchangeRate?base_currency=USD&target_currency=ARS' from origin 'https://pipe.store' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  22. Failed to load resource: net::ERR_FAILED
+  23. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/retail?name=pipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  24. Failed to load resource: net::ERR_FAILED
+  25. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/cart/' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  26. Failed to load resource: net::ERR_FAILED
+  27. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/zone/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  28. Failed to load resource: net::ERR_FAILED
+  29. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton-retail/footerpipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  30. Failed to load resource: net::ERR_FAILED
+  31. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/category/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  32. Failed to load resource: net::ERR_FAILED
+  33. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton/4' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  34. Failed to load resource: net::ERR_FAILED
+  35. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/configuration' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  36. Failed to load resource: net::ERR_FAILED
+  37. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/status' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  38. Failed to load resource: net::ERR_FAILED
+  x  1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.1s)
+  1. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/status' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  2. Failed to load resource: net::ERR_FAILED
+  3. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/exchangeRate?base_currency=USD&target_currency=ARS' from origin 'https://pipe.store' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
   4. Failed to load resource: net::ERR_FAILED
-  ok 1 [chromium] › tests\smoke-precios.spec.js:85:3 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (14.1s)
-📋 Página: Home — 15 precios encontrados
-  ✅ AR$ 576.469,00
-  ✅ AR$ 576.469,00
-  ✅ AR$ 413.599,00
-  ✅ AR$ 439.999,00
-  ✅ AR$ 783.199,00
-  ✅ AR$ 755.555,00
-  ✅ AR$ 565.713,00
-  ❌ "AR$ 1.083.332,00"
-  ✅ AR$ 259.999,00
-  ❌ "AR$ 1.999.998,18"
-  ✅ AR$ 651.199,00
-  ✅ AR$ 633.599,00
-  ❌ "AR$ 1.329.199,00"
-  ❌ "AR$ 1.325.165,00"
-  ✅ AR$ 823.332,00
-📧 Notificación enviada: Precios inválidos en categoría Home
-  x  2 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (6.7s)
-📋 Página: Home — 15 precios encontrados
-  ✅ AR$ 576.469,00
-  ✅ AR$ 576.469,00
-  ✅ AR$ 413.599,00
-  ✅ AR$ 439.999,00
-  ✅ AR$ 783.199,00
-  ✅ AR$ 755.555,00
-  ✅ AR$ 565.713,00
-  ❌ "AR$ 1.083.332,00"
-  ✅ AR$ 259.999,00
-  ❌ "AR$ 1.999.998,18"
-  ✅ AR$ 651.199,00
-  ✅ AR$ 633.599,00
-  ❌ "AR$ 1.329.199,00"
-  ❌ "AR$ 1.325.165,00"
-  ✅ AR$ 823.332,00
-  x  3 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (retry #1) (5.6s)
-📋 Página: Televisores — 7 precios encontrados
-  ✅ AR$ 565.713,00
-  ✅ AR$ 565.713,00
-  ❌ "AR$ 1.516.666,00"
-  ❌ "AR$ 1.083.332,00"
-  ✅ AR$ 259.999,00
-  ✅ AR$ 413.599,00
-  ❌ "AR$ 10.888.887,00"
-📧 Notificación enviada: Precios inválidos en categoría Televisores
-  x  4 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (6.3s)
-📋 Página: Televisores — 7 precios encontrados
-  ✅ AR$ 565.713,00
-  ✅ AR$ 565.713,00
-  ❌ "AR$ 1.516.666,00"
-  ❌ "AR$ 1.083.332,00"
-  ✅ AR$ 259.999,00
-  ✅ AR$ 413.599,00
-  ❌ "AR$ 10.888.887,00"
-  x  5 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (retry #1) (5.8s)
-📋 Página: Lavado — 10 precios encontrados
-  ✅ AR$ 999.999,00
-  ✅ AR$ 762.519,00
-  ✅ AR$ 651.199,00
-  ✅ AR$ 629.199,00
-  ✅ AR$ 439.999,00
-  ✅ AR$ 633.599,00
-  ✅ AR$ 615.999,00
-  ✅ AR$ 539.999,00
-  ❌ "AR$ 1.999.998,18"
-  ✅ AR$ 879.936,00
-📧 Notificación enviada: Precios inválidos en categoría Lavado
-  x  6 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (6.5s)
-📋 Página: Lavado — 10 precios encontrados
-  ✅ AR$ 999.999,00
-  ✅ AR$ 762.519,00
-  ✅ AR$ 651.199,00
-  ✅ AR$ 629.199,00
-  ✅ AR$ 439.999,00
-  ✅ AR$ 633.599,00
-  ✅ AR$ 615.999,00
-  ✅ AR$ 539.999,00
-  ❌ "AR$ 1.999.998,18"
-  ✅ AR$ 879.936,00
-  x  7 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (retry #1) (5.0s)
-📋 Página: Heladeras — 5 precios encontrados
-  ✅ AR$ 771.428,00
-  ✅ AR$ 823.332,00
-  ✅ AR$ 783.199,00
-  ❌ "AR$ 1.329.199,00"
-  ❌ "AR$ 1.325.165,00"
-📧 Notificación enviada: Precios inválidos en categoría Heladeras
-  x  8 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (6.2s)
-📋 Página: Heladeras — 5 precios encontrados
-  ✅ AR$ 771.428,00
-  ✅ AR$ 823.332,00
-  ✅ AR$ 783.199,00
-  ❌ "AR$ 1.329.199,00"
-  ❌ "AR$ 1.325.165,00"
-  x  9 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (retry #1) (5.0s)
-📋 Página: Aire Acondicionado — 4 precios encontrados
-  ✅ AR$ 675.999,00
-  ✅ AR$ 695.199,00
-  ✅ AR$ 755.555,00
-  ✅ AR$ 684.444,00
-  ok 10 [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.7s)
+  5. TypeError: Failed to fetch
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1068198
+    at fs (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1377425)
+    at Lc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396393)
+    at t.unstable_runWithPriority (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1414665)
+    at Gi (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1339063)
+    at Nc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396144)
+    at https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396056
+    at F (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1413603)
+    at O.port1.onmessage (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1412361)
+  6. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/category/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  7. Failed to load resource: net::ERR_FAILED
+  8. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/zone/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  9. Failed to load resource: net::ERR_FAILED
+  10. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton-retail/footerpipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  11. Failed to load resource: net::ERR_FAILED
+  12. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/cart/' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  13. Failed to load resource: net::ERR_FAILED
+  14. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/retail?name=pipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  15. Failed to load resource: net::ERR_FAILED
+  16. Error al obtener el retail_id: TypeError: Failed to fetch
+    at Proxy.fetchData (https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1374558)
+    at Proxy.getRetailByName (https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1389237)
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1066898
+    at https://pipe.store/static/js/main.8711fc1b.chunk.js:2:1067088
+    at fs (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1377425)
+    at Lc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396393)
+    at t.unstable_runWithPriority (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1414665)
+    at Gi (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1339063)
+    at Nc (https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396144)
+    at https://pipe.store/static/js/5.c9b80278.chunk.js:2:1396056
+  17. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton/4' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  18. Failed to load resource: net::ERR_FAILED
+  19. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/configuration' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  20. Failed to load resource: net::ERR_FAILED
+  21. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/status' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  22. Failed to load resource: net::ERR_FAILED
+  23. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/exchangeRate?base_currency=USD&target_currency=ARS' from origin 'https://pipe.store' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  24. Failed to load resource: net::ERR_FAILED
+  25. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/category/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  26. Failed to load resource: net::ERR_FAILED
+  27. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/zone/@ALL@' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  28. Failed to load resource: net::ERR_FAILED
+  29. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton-retail/footerpipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  30. Failed to load resource: net::ERR_FAILED
+  31. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/cart/' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  32. Failed to load resource: net::ERR_FAILED
+  33. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/retail?name=pipestore' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  34. Failed to load resource: net::ERR_FAILED
+  35. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/skeleton/4' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  36. Failed to load resource: net::ERR_FAILED
+  37. Access to fetch at 'https://ecommerce-fob-server.prod.phinxlabcore.com/configuration' from origin 'https://pipe.store' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+  38. Failed to load resource: net::ERR_FAILED
+  ok 2 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (retry #1) (7.7s)
+⚠️  Timeout esperando precios en Home
+⚠️  No se encontraron precios en Home. Verificar selector: h5[id*="-price"]
+  -  3 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home
+⚠️  Timeout esperando precios en Televisores
+⚠️  No se encontraron precios en Televisores. Verificar selector: h5[id*="-price"]
+  -  4 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores
+⚠️  Timeout esperando precios en Lavado
+⚠️  No se encontraron precios en Lavado. Verificar selector: h5[id*="-price"]
+  -  5 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado
+⚠️  Timeout esperando precios en Heladeras
+⚠️  No se encontraron precios en Heladeras. Verificar selector: h5[id*="-price"]
+  -  6 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras
+⚠️  Timeout esperando precios en Aire Acondicionado
+⚠️  No se encontraron precios en Aire Acondicionado. Verificar selector: h5[id*="-price"]
+  -  7 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado
 📦 Testeando detalle de producto: https://pipe.store/
-Precios encontrados: 4 | Válidos: 3 | Inválidos: 1
-❌ "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-  x  11 [chromium] › tests\smoke-precios.spec.js:205:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.8s)
+  x  8 [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.8s)
 📦 Testeando detalle de producto: https://pipe.store/
-Precios encontrados: 4 | Válidos: 3 | Inválidos: 1
-❌ "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-  x  12 [chromium] › tests\smoke-precios.spec.js:205:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (retry #1) (4.8s)
-  ok 13 [chromium] › tests\smoke-precios.spec.js:259:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.3s)
-  1) [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home 
-    Error: Se encontraron 4 precio(s) inválido(s) en Home:
-    "AR$ 1.083.332,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.329.199,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.325.165,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-a3471-e-Precios-correctos-en-Home-chromium\test-failed-1.png
-    Error: Se encontraron 4 precio(s) inválido(s) en Home:
-    "AR$ 1.083.332,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.329.199,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.325.165,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-a3471-e-Precios-correctos-en-Home-chromium-retry1\test-failed-1.png
-  2) [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores 
-    Error: Se encontraron 3 precio(s) inválido(s) en Televisores:
-    "AR$ 1.516.666,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.083.332,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 10.888.887,00" → Longitud sospechosa: 17 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-3d75c-os-correctos-en-Televisores-chromium\test-failed-1.png
-    Error: Se encontraron 3 precio(s) inválido(s) en Televisores:
-    "AR$ 1.516.666,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.083.332,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 10.888.887,00" → Longitud sospechosa: 17 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-3d75c-os-correctos-en-Televisores-chromium-retry1\test-failed-1.png
-  3) [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado 
-    Error: Se encontraron 1 precio(s) inválido(s) en Lavado:
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-50afd-Precios-correctos-en-Lavado-chromium\test-failed-1.png
-    Error: Se encontraron 1 precio(s) inválido(s) en Lavado:
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-50afd-Precios-correctos-en-Lavado-chromium-retry1\test-failed-1.png
-  4) [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras 
-    Error: Se encontraron 2 precio(s) inválido(s) en Heladeras:
-    "AR$ 1.329.199,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.325.165,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-53013-cios-correctos-en-Heladeras-chromium\test-failed-1.png
-    Error: Se encontraron 2 precio(s) inválido(s) en Heladeras:
-    "AR$ 1.329.199,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-    "AR$ 1.325.165,00" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
-      199 |         `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en ${pagina.nombre}:\n${preciosInvalidos}`
-    test-results\smoke-precios-🔥-Smoke-Tes-53013-cios-correctos-en-Heladeras-chromium-retry1\test-failed-1.png
-  5) [chromium] › tests\smoke-precios.spec.js:205:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
+  x  9 [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (retry #1) (4.5s)
+  ok 10 [chromium] › tests\smoke-precios.spec.js:278:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.0s)
+  1) [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
     test-results\smoke-precios-🔥-Smoke-Tes-f9158-gina-de-detalle-de-producto-chromium\test-failed-1.png
-    "AR$ 1.999.998,18" → Longitud sospechosa: 16 caracteres (máx esperado: 15)
     test-results\smoke-precios-🔥-Smoke-Tes-f9158-gina-de-detalle-de-producto-chromium-retry1\test-failed-1.png
-  5 failed
-    [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home 
-    [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores 
-    [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado 
-    [chromium] › tests\smoke-precios.spec.js:124:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras 
-    [chromium] › tests\smoke-precios.spec.js:205:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
-  3 passed (1.6m)
+  2) [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos 
+    test-results\smoke-precios-🔥-Smoke-Tes-41110--carga-sin-errores-críticos-chromium\test-failed-1.png
+  1 failed
+    [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
+    [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos 
+  1 passed (2.8m)
