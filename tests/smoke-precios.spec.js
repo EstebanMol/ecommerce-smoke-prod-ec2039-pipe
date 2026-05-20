@@ -90,20 +90,39 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
     const requestsFallidas = [];
 
     // Captura URLs reales de recursos que fallan
-    page.on('response', (resp) => {
-      if (resp.status() === 404) {
-        recursos404.push(resp.url());
+
+      page.on('response', (resp) => {
+
+      const status = resp.status();
+      const url = resp.url();
+      const tipo = resp.request().resourceType();
+
+      const recursosFrontend = [
+        'document',
+        'stylesheet',
+        'script',
+        'image',
+        'font'
+      ];
+
+      const es404Visible =
+        status === 404 &&
+        recursosFrontend.includes(tipo);
+
+      if (es404Visible) {
+
+        console.log(
+          `[404][${tipo}] ${url}`
+        );
+
+        recursos404.push({
+          tipo,
+          url
+        });
       }
     });
 
-    page.on('requestfailed', request => {
-      requestsFallidas.push({
-      url: request.url(),
-      error: request.failure()?.errorText
-      });
-    });
-
-
+    
     // Captura errores JS (sin URLs, el browser no las incluye)
     page.on('console', msg => {
      if (msg.type() === 'error') {

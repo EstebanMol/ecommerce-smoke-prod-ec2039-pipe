@@ -492,3 +492,435 @@ Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
   ok 7 [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.3s)
   ok 8 [chromium] › tests\smoke-precios.spec.js:278:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.1s)
   8 passed (38.4s)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026  7:56:15,58 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026  7:55:18,09 
+================================== 
+  1. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=9&frm=0&ae=g&auid=903208667.1779274525&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2136581905.1779274525&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He65i2v9221729889za200zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~119168155&apve=1&apvf=f&apvc=1&tft=1779274524925&tfd=2280
+  2. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=0&frm=0&auid=903208667.1779274525&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2136581905.1779274525&navt=n&npa=0&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469&apve=1&apvf=f&apvc=0&tids=AW-17409705973&tid=AW-17409705973&tft=1779274525127&tfd=2482
+  3. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/17409705973/?random=1779274525092&cv=11&fst=1779274525092&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=0&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=903208667.1779274525&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&gcp=5
+  5. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779274524557&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAAC&are=1&cid=371684148.1779274525&frm=0&pscdl=noapi&rcb=15&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&_s=1&tag_exp=0~115616985~115938466~115938468&sid=1779274525&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=2586
+  6. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=19&frm=0&ae=g&auid=903208667.1779274525&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2136581905.1779274525&navt=n&npa=0&_tu=CA&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469&apve=1&apvf=f&apvc=0&tids=AW-AW-17409705973&tid=AW-AW-17409705973&tft=1779274525564&tfd=2920
+  7. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/AW-17409705973/?random=1779274525548&cv=11&fst=1779274525548&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=19&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=903208667.1779274525&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&gcp=5
+  8. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779274524557&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=IAAAAAQC&are=1&cid=371684148.1779274525&frm=0&pscdl=noapi&rcb=15&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&tag_exp=0~115616985~115938466~115938468&sid=1779274525&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&_s=2&tfd=9105
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (10.9s)
+📋 Página: Home — 20 precios encontrados
+  ✅ AR$ 489.999,00
+  ✅ AR$ 413.599,00
+  ✅ AR$ 489.999,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 783.199,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 795.099,00
+  ok 2 [chromium] › tests\smoke-precios.spec.js:161:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (5.0s)
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:161:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.9s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:161:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (5.1s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:161:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.8s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:161:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.7s)
+📦 Testeando detalle de producto: https://pipe.store/
+  x  7 [chromium] › tests\smoke-precios.spec.js:242:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.6s)
+📦 Testeando detalle de producto: https://pipe.store/
+  x  8 [chromium] › tests\smoke-precios.spec.js:242:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (retry #1) (4.7s)
+  ok 9 [chromium] › tests\smoke-precios.spec.js:296:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.5s)
+  1) [chromium] › tests\smoke-precios.spec.js:242:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
+    test-results\smoke-precios-🔥-Smoke-Tes-f9158-gina-de-detalle-de-producto-chromium\test-failed-1.png
+    test-results\smoke-precios-🔥-Smoke-Tes-f9158-gina-de-detalle-de-producto-chromium-retry1\test-failed-1.png
+  1 failed
+    [chromium] › tests\smoke-precios.spec.js:242:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto 
+  7 passed (54.0s)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026  8:01:55,47 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026  8:01:07,37 
+================================== 
+  1. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=16&frm=0&ae=g&auid=2025458097.1779274873&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1407877753.1779274873&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He65i2v9221729889za200zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~116701381&apve=1&apvf=f&apvc=1&tft=1779274873385&tfd=2437
+  2. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=1&frm=0&auid=2025458097.1779274873&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1407877753.1779274873&navt=n&npa=0&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381&apve=1&apvf=f&apvc=0&tids=AW-17409705973&tid=AW-17409705973&tft=1779274873563&tfd=2615
+  3. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/17409705973/?random=1779274873533&cv=11&fst=1779274873533&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=1&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=2025458097.1779274873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&gcp=5
+  5. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779274873009&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAAC&are=1&cid=1534874575.1779274874&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&_s=1&tag_exp=0~115938466~115938469&sid=1779274873&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=2710
+  6. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=19&frm=0&ae=g&auid=2025458097.1779274873&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1407877753.1779274873&navt=n&npa=0&_tu=CA&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381&apve=1&apvf=f&apvc=0&tids=AW-AW-17409705973&tid=AW-AW-17409705973&tft=1779274873866&tfd=2918
+  7. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/AW-17409705973/?random=1779274873849&cv=11&fst=1779274873849&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=19&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=2025458097.1779274873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&gcp=5
+  8. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779274873009&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=IAAAAAQC&are=1&cid=1534874575.1779274874&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&tag_exp=0~115938466~115938469&sid=1779274873&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&_s=2&tfd=8848
+  1. Failed to load resource: the server responded with a status of 404 ()
+  2. Failed to load resource: the server responded with a status of 404 ()
+  3. Failed to load resource: the server responded with a status of 404 ()
+  4. Failed to load resource: the server responded with a status of 404 ()
+  5. Failed to load resource: the server responded with a status of 404 ()
+  6. Failed to load resource: the server responded with a status of 404 ()
+  7. Failed to load resource: the server responded with a status of 404 ()
+  8. Failed to load resource: the server responded with a status of 404 ()
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.0s)
+📋 Página: Home — 9 precios encontrados
+  ✅ AR$ 533.332,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ok 2 [chromium] › tests\smoke-precios.spec.js:164:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (4.9s)
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:164:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.6s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:164:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (5.0s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:164:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.8s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:164:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.8s)
+📦 Testeando detalle de producto: https://pipe.store/
+Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
+  ok 7 [chromium] › tests\smoke-precios.spec.js:245:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.6s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:299:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.6s)
+  8 passed (45.9s)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026  8:06:18,64 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026  8:05:27,10 
+================================== 
+  1. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=14&frm=0&ae=g&auid=547343212.1779275135&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2000733344.1779275135&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He65i2v9221729889za200zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118131809~119027224&apve=1&apvf=f&apvc=1&tft=1779275135180&tfd=2474
+  3. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779275134736&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAAC&are=1&cid=478883810.1779275135&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&_s=1&tag_exp=0~115616985~115938466~115938469~118128922&sid=1779275135&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=2694
+  4. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=5&frm=0&auid=547343212.1779275135&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2000733344.1779275135&navt=n&npa=0&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118131809&apve=1&apvf=f&apvc=0&tids=AW-17409705973&tid=AW-17409705973&tft=1779275135525&tfd=2819
+  5. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/17409705973/?random=1779275135484&cv=11&fst=1779275135484&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118131809&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=5&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=547343212.1779275135&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&gcp=5
+  6. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/AW-17409705973/?random=1779275135773&cv=11&fst=1779275135773&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118131809&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=0&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=547343212.1779275135&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&gcp=5
+  7. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=0&frm=0&ae=g&auid=547343212.1779275135&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=2000733344.1779275135&navt=n&npa=0&_tu=CA&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118131809&apve=1&apvf=f&apvc=0&tids=AW-AW-17409705973&tid=AW-AW-17409705973&tft=1779275135790&tfd=3084
+  8. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779275134736&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=IAAAAAQC&are=1&cid=478883810.1779275135&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&tag_exp=0~115616985~115938466~115938469~118128922&sid=1779275135&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&_s=2&tfd=8910
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.1s)
+📋 Página: Home — 20 precios encontrados
+  ✅ AR$ 489.999,00
+  ✅ AR$ 413.599,00
+  ✅ AR$ 489.999,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 783.199,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 795.099,00
+  ok 2 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (5.4s)
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.8s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (4.9s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.6s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (5.5s)
+📦 Testeando detalle de producto: https://pipe.store/
+Precios encontrados: 9 | Válidos: 9 | Inválidos: 0
+  ok 7 [chromium] › tests\smoke-precios.spec.js:249:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (5.3s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:303:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.2s)
+  8 passed (47.3s)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026  9:27:05,24 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026  9:25:48,29 
+================================== 
+  1. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=13&frm=0&ae=g&auid=1281211811.1779279956&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1045956470.1779279956&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He65i2v9221729889za200zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381~119169248&apve=1&apvf=f&apvc=1&tft=1779279956132&tfd=2512
+  3. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779279955699&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAAC&are=1&cid=1368915919.1779279956&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&_s=1&tag_exp=0~115616986~115938466~115938468~119027224~119169248&sid=1779279956&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=2749
+  4. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=4&frm=0&auid=1281211811.1779279956&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&en=page_view&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1045956470.1779279956&navt=n&npa=0&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381~119168155~119169248&apve=1&apvf=f&apvc=0&tids=AW-17409705973&tid=AW-17409705973&tft=1779279956520&tfd=2900
+  5. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/17409705973/?random=1779279956479&cv=11&fst=1779279956479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be65i2v9226556277z89221729889za20gzb9221729889zd9221729889xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381~119168155~119169248&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=4&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1281211811.1779279956&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5
+  6. [net::ERR_ABORTED] https://www.google.com/rmkt/collect/AW-17409705973/?random=1779279956738&cv=11&fst=1779279956738&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381~119169248&u_w=1280&u_h=720&url=https%3A%2F%2Fpipe.store%2F&rcb=17&frm=0&tiba=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1281211811.1779279956&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&gcp=5
+  7. [net::ERR_ABORTED] https://www.google.com/ccm/collect?rcb=17&frm=0&ae=g&auid=1281211811.1779279956&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&dl=https%3A%2F%2Fpipe.store%2F&scrsrc=www.googletagmanager.com&rnd=1045956470.1779279956&navt=n&npa=0&_tu=CA&gtm=45be65i2z89221729889za20gzb9221729889zd9221729889xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~116701381~119169248&apve=1&apvf=f&apvc=0&tids=AW-AW-17409705973&tid=AW-AW-17409705973&tft=1779279956756&tfd=3136
+  8. [net::ERR_ABORTED] https://www.google-analytics.com/g/collect?v=2&tid=G-2LMT8VDX26&gtm=45je65i2v9221745085z89221729889za20gzb9221729889zd9221729889&_p=1779279955699&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=IAAAAAQC&are=1&cid=1368915919.1779279956&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=es-ar&tag_exp=0~115616986~115938466~115938468~119027224~119169248&sid=1779279956&sct=1&seg=0&dl=https%3A%2F%2Fpipe.store%2F&dt=PipeStore%7CTecnolog%C3%ADa%20pensada%20para%20vos&_s=2&tfd=8931
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.1s)
+⚠️  Timeout esperando precios en Home
+⚠️  No se encontraron precios en Home. Verificar selector: h5[id*="-price"]
+  -  2 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (5.3s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (5.0s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (5.1s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:168:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (6.3s)
+📦 Testeando detalle de producto: https://pipe.store/
+Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
+  ok 7 [chromium] › tests\smoke-precios.spec.js:249:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (6.3s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:303:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (5.2s)
+  7 passed (1.2m)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026  9:39:00,31 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026  9:38:09,39 
+================================== 
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.1s)
+📋 Página: Home — 20 precios encontrados
+  ✅ AR$ 489.999,00
+  ✅ AR$ 413.599,00
+  ✅ AR$ 489.999,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 783.199,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 795.099,00
+  ok 2 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (5.1s)
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (5.1s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (5.1s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.9s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.9s)
+📦 Testeando detalle de producto: https://pipe.store/
+Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
+  ok 7 [chromium] › tests\smoke-precios.spec.js:261:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (5.1s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:315:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.8s)
+  8 passed (48.0s)
+ 
+================================== 
+EJECUCION: mié. 20/05/2026 10:22:26,00 
+================================== 
+================================== 
+EJECUCION: mié. 20/05/2026 10:21:35,60 
+================================== 
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.4s)
+📋 Página: Home — 20 precios encontrados
+  ✅ AR$ 489.999,00
+  ✅ AR$ 413.599,00
+  ✅ AR$ 489.999,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 783.199,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 795.099,00
+  ok 2 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (5.7s)
+📋 Página: Televisores — 7 precios encontrados
+  ✅ AR$ 4.899.999,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 565.713,00
+  ✅ AR$ 1.516.666,00
+  ✅ AR$ 1.083.332,00
+  ✅ AR$ 259.999,00
+  ✅ AR$ 413.599,00
+  ok 3 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.7s)
+📋 Página: Lavado — 11 precios encontrados
+  ✅ AR$ 999.999,00
+  ✅ AR$ 1.099.999,00
+  ✅ AR$ 479.999,00
+  ✅ AR$ 762.519,00
+  ✅ AR$ 651.199,00
+  ✅ AR$ 629.199,00
+  ✅ AR$ 439.999,00
+  ✅ AR$ 633.599,00
+  ✅ AR$ 615.999,00
+  ✅ AR$ 533.332,00
+  ✅ AR$ 703.949,00
+  ok 4 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (4.6s)
+📋 Página: Heladeras — 5 precios encontrados
+  ✅ AR$ 771.428,00
+  ✅ AR$ 795.099,00
+  ✅ AR$ 823.332,00
+  ✅ AR$ 925.299,00
+  ✅ AR$ 783.199,00
+  ok 5 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.7s)
+📋 Página: Aire Acondicionado — 4 precios encontrados
+  ✅ AR$ 675.999,00
+  ✅ AR$ 695.199,00
+  ✅ AR$ 755.555,00
+  ✅ AR$ 684.444,00
+  ok 6 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.6s)
+📦 Testeando detalle de producto: https://pipe.store/
+Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
+  ok 7 [chromium] › tests\smoke-precios.spec.js:261:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (5.1s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:315:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (5.0s)
+  8 passed (47.3s)

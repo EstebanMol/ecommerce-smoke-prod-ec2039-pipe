@@ -1,7 +1,7 @@
 ================================== 
-EJECUCION: mar. 19/05/2026 14:56:31,70 
+EJECUCION: mié. 20/05/2026 10:21:35,60 
 ================================== 
-  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (7.7s)
+  ok 1 [chromium] › tests\smoke-precios.spec.js:86:5 › 🔥 Smoke Test — Validación de precios pipe.store › El sitio carga sin errores críticos (11.4s)
 📋 Página: Home — 20 precios encontrados
   ✅ AR$ 489.999,00
   ✅ AR$ 413.599,00
@@ -23,7 +23,7 @@ EJECUCION: mar. 19/05/2026 14:56:31,70
   ✅ AR$ 925.299,00
   ✅ AR$ 823.332,00
   ✅ AR$ 795.099,00
-  ok 2 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (4.4s)
+  ok 2 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Home (5.7s)
 📋 Página: Televisores — 7 precios encontrados
   ✅ AR$ 4.899.999,00
   ✅ AR$ 565.713,00
@@ -32,7 +32,7 @@ EJECUCION: mar. 19/05/2026 14:56:31,70
   ✅ AR$ 1.083.332,00
   ✅ AR$ 259.999,00
   ✅ AR$ 413.599,00
-  ok 3 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.2s)
+  ok 3 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Televisores (4.7s)
 📋 Página: Lavado — 11 precios encontrados
   ✅ AR$ 999.999,00
   ✅ AR$ 1.099.999,00
@@ -45,22 +45,22 @@ EJECUCION: mar. 19/05/2026 14:56:31,70
   ✅ AR$ 615.999,00
   ✅ AR$ 533.332,00
   ✅ AR$ 703.949,00
-  ok 4 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (4.2s)
+  ok 4 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Lavado (4.6s)
 📋 Página: Heladeras — 5 precios encontrados
   ✅ AR$ 771.428,00
   ✅ AR$ 795.099,00
   ✅ AR$ 823.332,00
   ✅ AR$ 925.299,00
   ✅ AR$ 783.199,00
-  ok 5 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.4s)
+  ok 5 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Heladeras (4.7s)
 📋 Página: Aire Acondicionado — 4 precios encontrados
   ✅ AR$ 675.999,00
   ✅ AR$ 695.199,00
   ✅ AR$ 755.555,00
   ✅ AR$ 684.444,00
-  ok 6 [chromium] › tests\smoke-precios.spec.js:143:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.3s)
+  ok 6 [chromium] › tests\smoke-precios.spec.js:180:5 › 🔥 Smoke Test — Validación de precios pipe.store › Precios correctos en: Aire Acondicionado (4.6s)
 📦 Testeando detalle de producto: https://pipe.store/
 Precios encontrados: 20 | Válidos: 20 | Inválidos: 0
-  ok 7 [chromium] › tests\smoke-precios.spec.js:224:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (4.3s)
-  ok 8 [chromium] › tests\smoke-precios.spec.js:278:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (4.1s)
-  8 passed (38.4s)
+  ok 7 [chromium] › tests\smoke-precios.spec.js:261:3 › 🔥 Smoke Test — Validación de precios pipe.store › Precio correcto en página de detalle de producto (5.1s)
+  ok 8 [chromium] › tests\smoke-precios.spec.js:315:3 › 🔥 Smoke Test — Validación de precios pipe.store › No hay precios con overflow (bug conocido de producción) (5.0s)
+  8 passed (47.3s)
