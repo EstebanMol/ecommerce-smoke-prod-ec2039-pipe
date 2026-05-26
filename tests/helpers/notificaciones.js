@@ -38,7 +38,7 @@ async function notificarError({ titulo, mensaje, detalles = [], screenshotPath =
     await sgMail.send({
       to: process.env.MAIL_TO,
       from: process.env.MAIL_FROM,
-      subject: `🚨 [pipe.store] ${titulo}`,
+      subject: `🚨 [pipe.store DEV] ${titulo}`,
       html,
       attachments,
     });
