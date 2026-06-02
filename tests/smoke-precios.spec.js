@@ -222,7 +222,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
       await page.evaluate(() => window.scrollTo(0, 300));
       await page.waitForTimeout(1000);
       await page.evaluate(() => window.scrollTo(0, 600));
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(1000); 
 
       try {
         await page.waitForSelector('h5[id*="-price"]', { timeout: 20000 });
