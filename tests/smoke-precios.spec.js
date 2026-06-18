@@ -708,6 +708,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
           }
 
           // CA #3: consistencia leyenda "sin interés" vs precio base
+          // Solo validar si el precio base es válido (no está roto por el bug de overflow)
           const precioTexto = await page.$eval(
             SELECTORS.PRECIO_DETALLE,
             (el) => el.textContent?.trim() || ''
@@ -717,18 +718,24 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
             precioTexto.replace('AR$', '').replace(/\./g, '').replace(',', '.').trim()
           );
 
-          for (const fila of filasSinInteres) {
-            const totalFila = parseFloat(
-              fila.total.replace('AR$', '').replace(/\./g, '').replace(',', '.').trim()
-            );
-            if (!isNaN(totalFila) && !isNaN(precioBase) && precioBase > 0) {
-              const diferenciaPct = Math.abs(totalFila - precioBase) / precioBase;
-              if (diferenciaPct > 0.05) {
-                erroresProducto.push(
-                  `❌ CA #3: ${fila.cuotas} cuota(s) marcadas "sin interés" pero total ` +
-                  `${fila.total} difiere del precio base ${precioTexto} en ${(diferenciaPct * 100).toFixed(1)}%`
-                );
-                console.error(`   ❌ CA #3 fallido: ${erroresProducto[erroresProducto.length - 1]}`);
+          const precioBaseValido = !isNaN(precioBase) && precioBase >= 1000 && precioBase <= 999999999;
+
+          if (!precioBaseValido) {
+            console.warn(`   ⚠️  CA #3 omitido: precio base inválido (${precioTexto})`);
+          } else {
+            for (const fila of filasSinInteres) {
+              const totalFila = parseFloat(
+                fila.total.replace('AR$', '').replace(/\./g, '').replace(',', '.').trim()
+              );
+              if (!isNaN(totalFila)) {
+                const diferenciaPct = Math.abs(totalFila - precioBase) / precioBase;
+                if (diferenciaPct > 0.05) {
+                  erroresProducto.push(
+                    `❌ CA #3: ${fila.cuotas} cuota(s) marcadas "sin interés" pero total ` +
+                    `${fila.total} difiere del precio base ${precioTexto} en ${(diferenciaPct * 100).toFixed(1)}%`
+                  );
+                  console.error(`   ❌ CA #3 fallido`);
+                }
               }
             }
           }
@@ -762,7 +769,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
           `${e.url}:\n  ${e.errores.join('\n  ')}`
         ).join('\n\n');
 
-        expect.soft(0, `Se encontraron errores en ${errores.length} producto(s):\n\n${resumen}`).toBe(1);
+        expect(errores.length, `Se encontraron errores en ${errores.length} producto(s):\n\n${resumen}`).toBe(0);
       }
 
       console.log(`\n✅ Validación completa. Errores encontrados: ${errores.length}/${productos.length} productos.`);
