@@ -4,9 +4,17 @@ const path = require('path');
 
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
+function formatearDetalle(texto) {
+  // Si el texto contiene una URL, convertirla en link clicable
+  return texto.replace(
+    /(https?:\/\/[^\s<>"]+)/g,
+    '<a href="$1" style="color:#0066cc;">$1</a>'
+  );
+}
+
 async function notificarError({ titulo, mensaje, detalles = [], screenshotPath = null }) {
   const listaErrores = detalles
-    .map((d, i) => `<li>${i + 1}. ${d}</li>`)
+    .map((d, i) => `<li>${i + 1}. ${formatearDetalle(d)}</li>`)
     .join('');
 
   const html = `
@@ -21,7 +29,6 @@ async function notificarError({ titulo, mensaje, detalles = [], screenshotPath =
     </p>
   `;
 
-  // Construir adjunto si existe el screenshot
   const attachments = [];
   if (screenshotPath && fs.existsSync(screenshotPath)) {
     const imageData = fs.readFileSync(screenshotPath).toString('base64');

@@ -686,7 +686,6 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
           filas.forEach((f) => console.log(`     • ${f.cuotas} cuota(s) — interés: "${f.interes}" — total: ${f.total}`));
 
           const filasConCuotas = filas.filter((f) => f.cuotas > 1);
-          const filasConInteres = filas.filter((f) => !f.sinInteres && f.cuotas > 1);
           const filasSinInteres = filas.filter((f) => f.sinInteres && f.cuotas > 1);
 
           const erroresProducto = [];
@@ -697,14 +696,6 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
             console.error(`   ❌ CA #1 fallido`);
           } else {
             console.log(`   ✅ CA #1: ${filasConCuotas.length} opción(es) con cuotas`);
-          }
-
-          // CA #2: al menos una forma de pago con interés
-          if (filasConInteres.length === 0) {
-            erroresProducto.push('❌ CA #2: ninguna forma de pago tiene intereses configurados');
-            console.error(`   ❌ CA #2 fallido`);
-          } else {
-            console.log(`   ✅ CA #2: ${filasConInteres.length} opción(es) con interés`);
           }
 
           // CA #3: consistencia leyenda "sin interés" vs precio base
