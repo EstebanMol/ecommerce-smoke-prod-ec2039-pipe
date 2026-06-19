@@ -4,22 +4,33 @@ const path = require('path');
 
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
+function escapeHtml(texto) {
+  return texto
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function formatearDetalle(texto) {
-  // Si el texto contiene una URL, convertirla en link clicable
-  return texto.replace(
-    /(https?:\/\/[^\s<>"]+)/g,
-    '<a href="$1" style="color:#0066cc;">$1</a>'
-  );
+  const partes = texto.split(/(https?:\/\/[^\s]+)/g);
+  return partes.map((parte) => {
+    if (/^https?:\/\//.test(parte)) {
+      // URL: NO escapar, construir link directamente
+      return `<a href="${parte}" style="color:#0066cc;">${parte}</a>`;
+    }
+    return escapeHtml(parte);
+  }).join('');
 }
 
 async function notificarError({ titulo, mensaje, detalles = [], screenshotPath = null }) {
   const listaErrores = detalles
-    .map((d, i) => `<li>${i + 1}. ${formatearDetalle(d)}</li>`)
+    .map((d, i) => `<li style="margin-bottom:8px;">${i + 1}. ${formatearDetalle(d)}</li>`)
     .join('');
 
   const html = `
     <h2 style="color: #cc0000;">🚨 Error detectado en producción</h2>
-    <p><strong>${mensaje}</strong></p>
+    <p><strong>${escapeHtml(mensaje)}</strong></p>
     ${detalles.length > 0 ? `<h3>Detalle:</h3><ul>${listaErrores}</ul>` : ''}
     ${screenshotPath ? `<h3>Captura de pantalla:</h3><img src="cid:screenshot" style="max-width:100%; border:1px solid #ccc;"/>` : ''}
     <hr/>

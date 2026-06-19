@@ -218,7 +218,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
       await notificarError({
         titulo: `${recursos404.length} recursos con error 404`,
         mensaje: 'Se detectaron recursos no encontrados en pipe.store DEV',
-        detalles: recursos404.map((url) => `<a href="${url}">${url}</a>`),
+        detalles: recursos404.map((url) => url),
       });
     }
 
@@ -295,7 +295,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
               .map((r) => {
                 const match = preciosRaw.find((p) => p.precio === r.precio);
                 const url = match?.url || 'URL no encontrada';
-                return `${r.precio} → ${r.errores.join(', ')}<br>&nbsp;&nbsp;&nbsp;<a href="${url}">${url}</a>`;
+                return `${r.precio} → ${r.errores.join(', ')} | ${url}`;
               }),
             screenshotPath: `playwright-report/precios-rotos-${pagina.nombre.toLowerCase()}.png`,
           });
