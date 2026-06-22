@@ -363,9 +363,12 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
         await notificarError({
           titulo: 'Precio inválido en página de detalle de producto',
           mensaje: `Se encontraron ${reporte.invalidos} precio(s) inválido(s) en el detalle`,
-          detalles: reporte.detalle
-            .filter((r) => !r.valid)
-            .map((r) => `${r.precio} → ${r.errores.join(', ')}`),
+          detalles: [
+            `URL del producto: ${url}`,
+            ...reporte.detalle
+              .filter((r) => !r.valid)
+              .map((r) => `${r.precio} → ${r.errores.join(', ')}`),
+          ],
         });
       } catch (e) {
         console.error('⚠️  Error al enviar notificación (test 3):', e.message);
@@ -415,16 +418,22 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
         fullPage: true,
       });
 
-      try {
-        await notificarError({
-          titulo: 'Bug de precios rotos detectado en producción',
-          mensaje: `Se encontraron ${preciosRotos.length} precio(s) con overflow en la Home`,
-          detalles: preciosRotos.map(
-            (p) => `"${p.texto.substring(0, 60)}..." (${p.longitud} caracteres) — clase: ${p.padre}`
-          ),
-        });
-      } catch (e) {
-        console.error('⚠️  Error al enviar notificación (test 4):', e.message);
+      if (testInfo.retry === 0) {
+        try {
+          await notificarError({
+            titulo: 'Bug de precios rotos detectado en producción',
+            mensaje: `Se encontraron ${preciosRotos.length} precio(s) con overflow en la Home`,
+            detalles: [
+              `URL: ${page.url()}`,
+              ...preciosRotos.map(
+                (p) => `"${p.texto.substring(0, 60)}..." (${p.longitud} caracteres) — clase: ${p.padre}`
+              ),
+            ],
+            screenshotPath: 'playwright-report/bug-precios-overflow.png',
+          });
+        } catch (e) {
+          console.error('⚠️  Error al enviar notificación (test 4):', e.message);
+        }
       }
     }
 
