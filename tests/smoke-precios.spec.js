@@ -33,10 +33,10 @@ const SELECTORS = {
 // ─── Páginas a testear ───────────────────────────────────────────────────────
 const PAGINAS = [
   { nombre: 'Home', path: '/' },
-  { nombre: 'TV', path: '/categories/962b9949-c7e2-4a1e-b4f8-837bc9ecc58d' },
-  { nombre: 'Lavarropas', path: '/categories/74845a0b-1bab-4812-b7f0-9ff20b68dc5b' },
-  { nombre: 'Microondas', path: '/categories/cc642452-7fb5-4d26-8d74-736c775576a6' },
-  { nombre: 'Celulares', path: '/categories/232a9297-4018-4ad6-8b6b-2e40a3455968' },
+  { nombre: 'TV', path: '/categories/60983488-fd4d-44a3-a790-e3c243fabbc0' },
+  { nombre: 'Lavado', path: '/categories/74845a0b-1bab-4812-b7f0-9ff20b68dc5b' },
+  { nombre: 'Notebooks', path: '/categories/8f8eb81b-7149-45e8-8820-8789f889d265' },
+  { nombre: 'Celulares', path: '/categories/a85d3890-3925-475a-a67a-a37f0308b665' },
 ];
 
 // ─── Helper: extraer precios visibles de la página ──────────────────────────
@@ -52,7 +52,7 @@ async function extraerPrecios(page, selector) {
         if (primeraLinea) {
           const linkEl = el.closest('a');
           const url = linkEl
-            ? `https://ecommerce-fob-app.dev.phinxlabcore.com${linkEl.getAttribute('href')}`
+            ? `https://pipe.store${linkEl.getAttribute('href')}`
             : 'URL no encontrada';
 
           resultados.push({ precio: primeraLinea, url });
@@ -180,7 +180,7 @@ async function navegarAlPrimerProducto(page) {
 // TEST SUITE PRINCIPAL
 // ════════════════════════════════════════════════════════════════════════════
 
-test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () => {
+test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
 
   // ── Test 1: Carga sin errores críticos ────────────────────────────────────
   test('El sitio carga sin errores críticos', async ({ page }, testInfo) => {
@@ -217,7 +217,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store DEV', () =>
     if (recursos404.length > 0 && testInfo.retry === 0) {
       await notificarError({
         titulo: `${recursos404.length} recursos con error 404`,
-        mensaje: 'Se detectaron recursos no encontrados en pipe.store DEV',
+        mensaje: 'Se detectaron recursos no encontrados en pipe.store',
         detalles: recursos404.map((url) => url),
       });
     }
