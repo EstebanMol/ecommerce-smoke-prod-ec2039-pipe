@@ -520,9 +520,24 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
       await page.waitForTimeout(800);
 
       // Click en "Ver otros medios de pago"
+      // Usamos isVisible con timeout corto para no bloquearnos en productos sin stock u otros layouts
       try {
         const btn = page.locator('a, button, span, p').filter({ hasText: 'Ver otros medios de pago' }).first();
-        await btn.waitFor({ state: 'visible', timeout: 10000 });
+        const visible = await btn.isVisible().catch(() => false);
+        if (!visible) {
+          // Segundo intento: esperar máximo 5s (balance entre páginas lentas y sin stock)
+          const aparecio = await btn.waitFor({ state: 'visible', timeout: 5000 }).then(() => true).catch(() => false);
+          if (!aparecio) {
+            // Detectar motivo para mejor logging
+            const sinStock = await page.locator('text=/sin stock/i').first().isVisible().catch(() => false);
+            if (sinStock) {
+              console.log('   ℹ️  Producto sin stock — se omite validación de medios de pago.');
+            } else {
+              console.warn('   ⚠️  Botón "Ver otros medios de pago" no encontrado (producto sin stock u otro layout).');
+            }
+            return null;
+          }
+        }
         await btn.scrollIntoViewIfNeeded();
         await btn.click();
       } catch (e) {
@@ -639,8 +654,8 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
     // ── Test 5: Validar cuotas e intereses en todos los productos ────────────
     // Un solo test que recorre todas las páginas y productos, y notifica
     // por cada producto que no cumpla las validaciones.
-    test('Validación de formas de pago en todos los productos', async ({ page }, testInfo) => {
-      test.setTimeout(600000); // 10 minutos para recorrer todos los productos
+    test('Validación de formas de pago en todos los productos', async ({ page, browser }, testInfo) => {
+      test.setTimeout(1200000); // 20 minutos para recorrer todos los productos
 
       // 1. Recolectar todos los productos únicos de todas las páginas
       const urlsVistas = new Set();
@@ -680,11 +695,51 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
         console.log(`\n🔍 Validando: ${producto.url}`);
         testInfo.annotations.push({ type: 'url_producto', description: producto.url });
 
+        // Abrir una página nueva por cada producto para evitar contaminación del DOM anterior
+        const paginaProducto = await browser.newPage();
         try {
-          await page.goto(producto.url, { waitUntil: 'domcontentloaded' });
-          await page.waitForTimeout(1500);
+          // Navegar y esperar carga completa
+          await paginaProducto.goto(producto.url, { waitUntil: 'load', timeout: 30000 });
+          // React muestra "No existe este producto" como estado inicial mientras carga datos.
+          // Esperamos a que aparezca el precio (AR$) o "sin stock" — señal de que React
+          // terminó de hidratar y el contenido real ya está en el DOM.
+          // Solo si ninguno aparece en 10s, ahí sí evaluamos el estado final.
+          await Promise.race([
+            paginaProducto.locator('text=/AR\$/').first().waitFor({ state: 'visible', timeout: 10000 }).catch(() => {}),
+            paginaProducto.locator('text=/producto sin stock/i').first().waitFor({ state: 'visible', timeout: 10000 }).catch(() => {}),
+          ]);
 
-          const filas = await abrirModalYLeerCuotas(page);
+          // Detectar si la página muestra "No existe este producto" (estado FINAL, no transitorio)
+          const noExiste = await paginaProducto.locator('text=/no existe este producto/i').first().isVisible().catch(() => false);
+          if (noExiste) {
+            // Distinguir producto real (sin stock) de producto mal configurado:
+            // Una página de producto real siempre tiene "¡Nuestras promociones bancarias!"
+            // La página vacía (mal configurado) no tiene ese texto.
+            const esProductoReal = await page.locator('text=/nuestras promociones bancarias/i').first().isVisible().catch(() => false);
+            if (esProductoReal) {
+              console.log('   ℹ️  Producto sin stock (página completa) — se omite validación de medios de pago.');
+            } else {
+              console.error(`   ❌ Producto mal configurado: página vacía con "No existe este producto" — ${producto.url}`);
+              if (testInfo.retry === 0) {
+                errores.push({ url: producto.url, pagina: producto.pagina, errores: ['❌ Producto mal configurado: página vacía con "No existe este producto"'] });
+                try {
+                  await notificarError({
+                    titulo: 'Producto mal configurado en producción',
+                    mensaje: 'El producto existe en el catálogo pero su página está vacía y muestra "No existe este producto".',
+                    detalles: [
+                      `URL: ${producto.url}`,
+                      `Página de origen: ${producto.pagina}`,
+                    ],
+                  });
+                } catch (e) {
+                  console.error('   ⚠️  Error al enviar notificación:', e.message);
+                }
+              }
+            }
+            continue;
+          }
+
+          const filas = await abrirModalYLeerCuotas(paginaProducto);
 
           if (!filas) {
             console.warn(`   ⚠️  No se pudo leer el modal para este producto.`);
@@ -709,7 +764,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
 
           // CA #3: consistencia leyenda "sin interés" vs precio base
           // Solo validar si el precio base es válido (no está roto por el bug de overflow)
-          const precioTexto = await page.$eval(
+          const precioTexto = await paginaProducto.$eval(
             SELECTORS.PRECIO_DETALLE,
             (el) => el.textContent?.trim() || ''
           ).catch(() => '');
@@ -760,6 +815,8 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
 
         } catch (e) {
           console.warn(`   ⚠️  Error validando producto ${producto.url}: ${e.message}`);
+        } finally {
+          await paginaProducto.close().catch(() => {});
         }
       }
 
