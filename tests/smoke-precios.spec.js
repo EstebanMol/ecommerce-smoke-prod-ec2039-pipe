@@ -522,14 +522,17 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
       // Click en "Ver otros medios de pago"
       // Usamos isVisible con timeout corto para no bloquearnos en productos sin stock u otros layouts
       try {
-        const btn = page.locator('a, button, span, p').filter({ hasText: 'Ver otros medios de pago' }).first();
+        const btn = page.locator('a, button, span, p, [class*="MuiLink"], [class*="MuiTypography"]').filter({ hasText: 'Ver otros medios de pago' }).first();
         // Scroll hasta la zona del botón antes de buscarlo
         await page.evaluate(() => window.scrollTo(0, 600));
         await page.waitForTimeout(500);
         const visible = await btn.isVisible().catch(() => false);
         if (!visible) {
-          // Reintento con hasta 15s — cubre páginas lentas con stock
-          const aparecio = await btn.waitFor({ state: 'visible', timeout: 15000 }).then(() => true).catch(() => false);
+          // Scroll más agresivo antes del reintento
+          await page.evaluate(() => window.scrollTo(0, 800));
+          await page.waitForTimeout(500);
+          // Reintento con hasta 20s — cubre páginas que necesitaron recargas
+          const aparecio = await btn.waitFor({ state: 'visible', timeout: 20000 }).then(() => true).catch(() => false);
           if (!aparecio) {
             const sinStock = await page.locator('text=/sin stock/i').first().isVisible().catch(() => false);
             if (sinStock) {
@@ -569,7 +572,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
           // Reabrir modal si no está abierto (desde el segundo método en adelante)
           const modalAbierto = await page.locator('[role="dialog"]').count() > 0;
           if (!modalAbierto) {
-            const btn = page.locator('a, button, span, p').filter({ hasText: 'Ver otros medios de pago' }).first();
+            const btn = page.locator('a, button, span, p, [class*="MuiLink"], [class*="MuiTypography"]').filter({ hasText: 'Ver otros medios de pago' }).first();
             await btn.click();
             await page.waitForSelector('[role="dialog"]', { timeout: 8000 });
             await page.waitForTimeout(800);
@@ -711,17 +714,66 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
             .waitFor({ state: 'hidden', timeout: 15000 })
             .catch(() => {}); // si no desaparece, seguimos igual y evaluamos abajo
 
-          // Detectar si la página muestra "No existe este producto" (estado FINAL, no transitorio)
-          const noExiste = await paginaProducto.locator('text=/no existe este producto/i').first().isVisible().catch(() => false);
+          // Verificar si la página tiene contenido real de producto (precio, breadcrumb, botón comprar)
+          // Esto es más confiable que buscar "No existe" que aparece transitoriamente en React
+          const tieneContenidoReal = async (pagina) => {
+            const tienePrecio     = await pagina.locator('text=/AR\$/').first().isVisible().catch(() => false);
+            const tieneSinStock   = await pagina.locator('text=/producto sin stock/i').first().isVisible().catch(() => false);
+            const tieneBreadcrumb = await pagina.locator('nav a, .breadcrumb a').nth(2).isVisible().catch(() => false);
+            const tieneComprar    = await pagina.locator('button, a').filter({ hasText: /comprar|agregar al carrito/i }).first().isVisible().catch(() => false);
+            return tienePrecio || tieneSinStock || tieneBreadcrumb || tieneComprar;
+          };
+
+          // Primera verificación
+          let esProductoValido = await tieneContenidoReal(paginaProducto);
+
+          if (!esProductoValido) {
+            // Puede ser carga lenta — esperar hasta 15s a que aparezca algo de contenido real
+            console.log('   🔄 Contenido no visible aún — esperando carga completa...');
+            await Promise.race([
+              paginaProducto.locator('text=/AR\$/').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('text=/producto sin stock/i').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('button, a').filter({ hasText: /comprar|agregar al carrito/i }).first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+            ]);
+            esProductoValido = await tieneContenidoReal(paginaProducto);
+          }
+
+          if (!esProductoValido) {
+            // Segundo intento: recargar página completa
+            console.log('   🔄 Sin contenido tras espera — recargando página (intento 1)...');
+            await paginaProducto.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+            await Promise.race([
+              paginaProducto.locator('text=/AR\$/').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('text=/producto sin stock/i').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('button, a').filter({ hasText: /comprar|agregar al carrito/i }).first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+            ]);
+            esProductoValido = await tieneContenidoReal(paginaProducto);
+          }
+
+          if (!esProductoValido) {
+            // Tercer intento: segunda recarga (algunos productos necesitan 2 recargas)
+            console.log('   🔄 Sin contenido tras recarga — recargando página (intento 2)...');
+            await paginaProducto.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+            await Promise.race([
+              paginaProducto.locator('text=/AR\$/').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('text=/producto sin stock/i').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+              paginaProducto.locator('button, a').filter({ hasText: /comprar|agregar al carrito/i }).first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {}),
+            ]);
+            esProductoValido = await tieneContenidoReal(paginaProducto);
+          }
+
+          // Solo si tras dos intentos no hay contenido real → producto mal configurado
+          const noExiste = !esProductoValido && await paginaProducto.locator('text=/no existe este producto/i').first().isVisible().catch(() => false);
           if (noExiste) {
             // Distinguir producto real (sin stock) de producto mal configurado:
             // Una página de producto real siempre tiene "¡Nuestras promociones bancarias!"
             // La página vacía (mal configurado) no tiene ese texto.
-            const esProductoReal = await page.locator('text=/nuestras promociones bancarias/i').first().isVisible().catch(() => false);
+            const esProductoReal = await paginaProducto.locator('text=/nuestras promociones bancarias/i').first().isVisible().catch(() => false);
             if (esProductoReal) {
               console.log('   ℹ️  Producto sin stock (página completa) — se omite validación de medios de pago.');
             } else {
               console.error(`   ❌ Producto mal configurado: página vacía con "No existe este producto" — ${producto.url}`);
+              console.log(`   🔍 Debug — esProductoValido: ${esProductoValido}, noExiste: ${noExiste}`);
               if (testInfo.retry === 0) {
                 errores.push({ url: producto.url, pagina: producto.pagina, errores: ['❌ Producto mal configurado: página vacía con "No existe este producto"'] });
                 try {
@@ -740,6 +792,14 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
             }
             continue;
           }
+
+          // Esperar explícitamente el botón antes de intentar abrirlo
+          // Cubre el caso donde el precio ya cargó pero el botón de medios de pago todavía no
+          await paginaProducto.locator('a, button, span, p, [class*="MuiLink"], [class*="MuiTypography"]')
+            .filter({ hasText: 'Ver otros medios de pago' })
+            .first()
+            .waitFor({ state: 'visible', timeout: 20000 })
+            .catch(() => {});
 
           const filas = await abrirModalYLeerCuotas(paginaProducto);
 
