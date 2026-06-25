@@ -523,12 +523,14 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
       // Usamos isVisible con timeout corto para no bloquearnos en productos sin stock u otros layouts
       try {
         const btn = page.locator('a, button, span, p').filter({ hasText: 'Ver otros medios de pago' }).first();
+        // Scroll hasta la zona del botón antes de buscarlo
+        await page.evaluate(() => window.scrollTo(0, 600));
+        await page.waitForTimeout(500);
         const visible = await btn.isVisible().catch(() => false);
         if (!visible) {
-          // Segundo intento: esperar máximo 5s (balance entre páginas lentas y sin stock)
-          const aparecio = await btn.waitFor({ state: 'visible', timeout: 5000 }).then(() => true).catch(() => false);
+          // Reintento con hasta 15s — cubre páginas lentas con stock
+          const aparecio = await btn.waitFor({ state: 'visible', timeout: 15000 }).then(() => true).catch(() => false);
           if (!aparecio) {
-            // Detectar motivo para mejor logging
             const sinStock = await page.locator('text=/sin stock/i').first().isVisible().catch(() => false);
             if (sinStock) {
               console.log('   ℹ️  Producto sin stock — se omite validación de medios de pago.');
@@ -655,7 +657,7 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
     // Un solo test que recorre todas las páginas y productos, y notifica
     // por cada producto que no cumpla las validaciones.
     test('Validación de formas de pago en todos los productos', async ({ page, browser }, testInfo) => {
-      test.setTimeout(1200000); // 20 minutos para recorrer todos los productos
+      test.setTimeout(2700000); // 45 minutos para recorrer todos los productos
 
       // 1. Recolectar todos los productos únicos de todas las páginas
       const urlsVistas = new Set();
@@ -691,23 +693,23 @@ test.describe('🔥 Smoke Test — Validación de precios pipe.store', () => {
       // 2. Validar cada producto
       const errores = [];
 
-      for (const producto of productos) {
-        console.log(`\n🔍 Validando: ${producto.url}`);
+      for (let i = 0; i < productos.length; i++) {
+        const producto = productos[i];
+        console.log(`\n🔍 [${i + 1}/${productos.length}] Validando: ${producto.url}`);
         testInfo.annotations.push({ type: 'url_producto', description: producto.url });
 
         // Abrir una página nueva por cada producto para evitar contaminación del DOM anterior
         const paginaProducto = await browser.newPage();
         try {
           // Navegar y esperar carga completa
-          await paginaProducto.goto(producto.url, { waitUntil: 'load', timeout: 30000 });
-          // React muestra "No existe este producto" como estado inicial mientras carga datos.
-          // Esperamos a que aparezca el precio (AR$) o "sin stock" — señal de que React
-          // terminó de hidratar y el contenido real ya está en el DOM.
-          // Solo si ninguno aparece en 10s, ahí sí evaluamos el estado final.
-          await Promise.race([
-            paginaProducto.locator('text=/AR\$/').first().waitFor({ state: 'visible', timeout: 10000 }).catch(() => {}),
-            paginaProducto.locator('text=/producto sin stock/i').first().waitFor({ state: 'visible', timeout: 10000 }).catch(() => {}),
-          ]);
+          await paginaProducto.goto(producto.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+          // React muestra "No existe este producto" como estado TRANSITORIO mientras carga.
+          // Estrategia: esperamos que ese texto desaparezca (hidden) antes de evaluarlo.
+          // Si desaparece → React hidró correctamente con el producto real.
+          // Si NO desaparece en 15s → es el estado final real → producto mal configurado.
+          await paginaProducto.locator('text=/no existe este producto/i').first()
+            .waitFor({ state: 'hidden', timeout: 15000 })
+            .catch(() => {}); // si no desaparece, seguimos igual y evaluamos abajo
 
           // Detectar si la página muestra "No existe este producto" (estado FINAL, no transitorio)
           const noExiste = await paginaProducto.locator('text=/no existe este producto/i').first().isVisible().catch(() => false);
